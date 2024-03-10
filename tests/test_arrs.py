@@ -19,6 +19,10 @@ class TestFunctions(unittest.TestCase):
         coll = [1, 2, 3, 4, 5]
         self.assertEqual(my_slice(coll, 1, 4), [2, 3, 4])
 
+    def test_my_slice_empty_collection(self):
+        coll = []
+        self.assertEqual(my_slice(coll, 0, 2), [])
+
     def test_my_slice_negative_start(self):
         coll = [1, 2, 3, 4, 5]
         self.assertEqual(my_slice(coll, -3), [3, 4, 5])
@@ -39,6 +43,3 @@ class TestFunctions(unittest.TestCase):
         coll = [1, 2, 3, 4, 5]
         self.assertEqual(my_slice(coll, -1, -3), [])
 
-
-if __name__ == '__main__':
-    unittest.main()
